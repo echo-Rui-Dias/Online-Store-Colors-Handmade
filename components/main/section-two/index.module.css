@@ -1,0 +1,117 @@
+/*
+Esta é a segunda secção do site.
+Nela temos uma imagem ( .image ) e uma descrição da loja ( .product-info ).
+É responsivo em 768px, 968px e max-width 1300px.
+*/
+.container{
+    background: #FFBA90;
+    font-size: 1em;
+    font-family: Cormorant;
+    display: block;
+}
+
+.row{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    margin: 0 10px;
+}
+
+.row>h2{
+    padding-top: 50px;
+    font-size: 2em;
+    margin-left: 10vw;
+}
+
+.image{
+    display: flex;
+    width: 343px;
+    height: 343px;
+    justify-self: center;
+}
+
+.product-info{
+    margin: 40px 0;
+}
+
+.product-info>p{
+    font-family:sans-serif;
+    margin-left: 10vw;
+    margin-right: 7vw;
+}
+
+.product-info>h2{
+    display: none;
+}
+
+@media screen and (min-width: 330px) {
+    .image{
+        width: 255px;
+        height: 255px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .row{
+    text-align: center;
+    margin: 0 20px;
+}
+
+.row>h2{
+    margin-left: 0;
+}
+
+.product-info{
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 60px;
+}
+
+.product-info>p{
+  text-align: start;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+}
+
+@media screen and (min-width: 992px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .row{
+        grid-auto-flow: column;
+        grid-template-areas: "image info";
+        max-width: 1300px;
+    }
+    .row>h2{
+        display: none;
+    }
+    .image{
+        grid-area: image;
+        width: 100%;
+        height: 100%;
+        margin-left: 70px;
+        max-width: 482px;
+        max-height: 482px;
+    }
+    .product-info{
+        display: grid;
+        grid-area: info;
+        grid-auto-flow: row;
+        grid-gap: 0;
+        width: 70%;
+        margin: auto;
+    }
+    .product-info>h2{
+        display: block;
+        text-align: start;
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+}

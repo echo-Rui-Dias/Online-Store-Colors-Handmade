@@ -1,0 +1,141 @@
+/*
+Esta é a top-navbar dividida por 3 colunas .menu-logo, .list-menu e .menu-shop
+A primeira coluna contém o logo ( .menu-logo > a )
+A segunda coluna é dividia em duas listas .list-menu-left e .list-menu-right .
+A terceira coluna é o carrinho da loja, que ainda está por programar.
+Responsiva em 768px, 992px e max-width 1300px.
+Em 992px a bottom-navbar recebe um display: none e a informação nela contida passa para esta top-navbar.
+*/
+
+.container{
+    position: fixed;
+    height: 68px;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+.row{
+    position: relative;
+    color: white;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 68px;
+    margin: 0 10px;
+}
+
+.menu-logo{
+    margin-top: 10px;
+    height: 100%;
+}
+.menu-logo>a{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-logo>a>img{
+    height: 40px;
+}
+
+.list-menu{
+    display: none;
+}
+
+.menu-shop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-shop>span{
+    color:#16011D;
+    margin-right: 10px;
+}
+
+.background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.65);
+    top: 0;
+    z-index: 1;
+}
+
+@media screen and (min-width: 768px){
+    .row{
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .row{
+        max-width: 1060px;
+        margin: auto;
+        transition: 0.3s;
+    }
+    .list-menu{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list-menu>ul{
+        display: grid;
+        grid-auto-flow: column;
+        list-style: none;
+        justify-content: center;
+        align-items: center;
+        grid-gap: 40px;
+        padding: 0;
+        margin: 0;
+    }
+    .list-menu>ul>li{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list-menu>ul>li>a{
+        color: #16011D;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #list-menu-left{
+        height: 100%;
+        margin-left: 50px;
+    }
+
+    #list-menu-right{
+        height: 100%;
+        margin-right: 50px;
+    }
+
+    #btn-login{
+        height: 48px;
+        background: #16011D;
+        color: white;
+        padding: 10px 30px;
+        border-radius: 4px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .row{
+        max-width: 1300px;
+        margin: auto;
+        transition: 0.3s;
+    }
+}
+

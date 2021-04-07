@@ -1,0 +1,298 @@
+/*
+O menu category é ativado ao escolher um dos icons dos respetivos produtos.
+A informação do category está em 'data/products.js'.
+Ele é dividido por duas linhas ( .product & .description ).
+A primeira linha é dividida entre .galery (imagem do produto escolhido) e .buy-options ( menu de compra )
+A segunda linha é dividida também por duas colunas ( .description-package & .description-material )
+Ambas a linhas sofrem alterações conforme o tamanho da tela ( mobile até 768px tablet até 992px e desktop com max-width de 1300px)  )
+*/
+
+.container {
+    font-size: 1em;
+  }
+  
+  .icons {
+    margin-bottom: 50px;
+  }
+  
+  .product {
+    margin: 0 20px;
+    margin-top: 50px;
+  }
+  
+  .galery {
+    width: 100%;
+    height: 300px;
+    margin: auto;
+  }
+  
+  .galery > .galery-small {
+    display: none;
+  }
+  
+  .galery > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .buy-options {
+    margin-top: 50px;
+  }
+  
+  .buy-options > h3 {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .buy-options > h3:nth-of-type(2) {
+    margin-top: 0;
+  }
+  .chose-buy-option > select {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .chose-buy-option-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .chose-buy-option-top > p {
+    color: #999999;
+  }
+  
+  .chose-buy-option-top > a > p {
+    margin: 0;
+  }
+  
+  .size > p {
+    color: #999999;
+  }
+  
+  .size > select {
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+  }
+  
+  .quantity {
+    display: none;
+  }
+  
+  .others {
+    display: none;
+  }
+  
+  .btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .btns > button {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+  }
+  
+  .btns > button:focus {
+    border: none;
+  }
+  
+  .btn-buy {
+    background-color: #000000;
+    color: white;
+    font-size: 1em;
+  }
+  
+  .btn-buy:focus {
+    border: none;
+  }
+  
+  /* 
+                                          para mais tarde
+
+  .btn-personalize {
+    border: 2px solid black;
+    background: white;
+    font-size: 1em;
+  } */
+
+  .description{
+    padding: 0 20px;
+  }
+  
+  .description > h4 {
+    font-size: 1em;
+    text-transform: uppercase;
+    color: #999999;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  .description div div h3 {
+    font-size: 1.7em;
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+  
+  .description div div h3:nth-of-type(1) {
+    margin-top: 10px;
+  }
+  
+  .others-test {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+  
+    .product {
+      margin-top: 0;
+    }
+  
+    .quantity {
+      display: block;
+    }
+  
+    .galery {
+      width: 60%;
+      height: 365px;
+    }
+  
+    .others {
+      display: block;
+    }
+  
+    .top-others {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .top-others > p {
+      color: #999999;
+    }
+  
+    .top-others > a > p {
+      margin: 0;
+    }
+  
+    .others-galery{
+      margin-bottom: 50px;
+    }
+  
+    .others-galery .option {
+      text-align: center;
+    }
+  
+    .others-galery .option > img {
+      width: 100%;
+      height: 100%;
+      max-width: 100px;
+      max-height: 100px;
+      object-fit: cover;
+      min-width: 50px;
+    }
+  
+    .chose-buy-option {
+      display: none;
+    }
+  
+    .size-quantity {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 120px;
+    }
+  
+    .quantity > div {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .quantity > div > span {
+      width: 20%;
+      text-align: center;
+      align-self: center;
+    }
+  
+    .quantity button {
+      width: 40%;
+      height: 30px;
+      background: white;
+      border: 1px solid #dcdcdc;
+    }
+  
+    .description > div {
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 100px;
+      
+    }
+  
+    .option > img {
+      margin: auto;
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+  
+    .container > h2 {
+      font-size: 3em;
+    }
+  
+    .product {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    .galery{
+      width: 50%;
+    }
+  
+    .buy-options {
+      margin-top: 0;
+      margin-left: 20px;
+      grid-area: buy;
+      display: block;
+      width: 50%;
+    }
+  
+    .description {
+      margin: 50px 20px;
+      padding: 0;
+    }
+  
+    .description > div {
+      display: grid;
+      grid-template-columns: 6fr 6fr;
+    }
+  
+    .description-package {
+      min-width: 480px;
+    }
+    .others {
+      overflow: hidden;
+    }
+    .others-galery {
+      position: relative;
+    }
+  
+    .others-galery .option img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .top-others {
+      margin-bottom: 10px;
+    }
+  }
+  

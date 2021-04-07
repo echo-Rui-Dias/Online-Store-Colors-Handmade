@@ -1,0 +1,361 @@
+/*
+Esta é a terceira secção do site, a secção de escolha de produtos.
+Nela encontramos um slider dentro de .icons-container.
+O slider é composto pelos 6 produtos ( .icons-item ) e tem um breakpoint responsivo a partir dos 766px
+A informação do slider está contida em 'data/products-icons.js'.
+A parte comentada deste código faz parte do CSS de "categoty.module.css" que eu deixei aqui,
+pois era onde estava a category antes de a colocarmos em separado.
+O código deste section é: 
+- Em mobile: 
+.container{}, 
+.row{}, 
+.row ul{}, 
+.row > h2{} 
+e .icons{}
+
+- Em:
+@media screen and (min-width: 768px) { 
+  .row > h2{} 
+}
+
+- E finalmente em: 
+@media screen and (min-width: 992px) { 
+  .row {} 
+  e .row > h2{}
+}
+
+Ainda não entendi o que querias fazer aqui ao colocar <Category /> na section-three,
+mas acabei por definir os incensos como index.js principal do localhost:3000, 
+sendo a primeira opção selecionada por defeito.
+*/
+.container {
+  font-size: 1em;
+}
+
+.row {
+  margin: 0 20px;
+}
+
+.row ul {
+  list-style: none;
+}
+
+.row > h2 {
+  text-align: center;
+  font-family: Cormorant;
+  font-size: 1.8em;
+  margin-top: 40px;
+}
+
+.icons {
+  margin-bottom: 50px;
+}
+
+/* .product {
+  margin-top: 50px;
+}
+.galery {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+.galery > .galery-small {
+  display: none;
+}
+
+.galery > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.buy-options {
+  margin-top: 50px;
+}
+
+.buy-options > h3 {
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.buy-options > h3:nth-of-type(2) {
+  margin-top: 0;
+}
+.chose-buy-option > select {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.chose-buy-option > select option {
+}
+
+.chose-buy-option-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chose-buy-option-top > p {
+  color: #999999;
+}
+
+.chose-buy-option-top > a > p {
+  margin: 0;
+}
+
+.size > p {
+  color: #999999;
+}
+
+.size > select {
+  width: 100%;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.quantity {
+  display: none;
+}
+
+.others {
+  display: none;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btns > button {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.btns > button:focus {
+  border: none;
+}
+
+.btn-buy {
+  background-color: #000000;
+  color: white;
+  font-size: 1em;
+}
+
+.btn-buy:focus {
+  border: none;
+}
+
+.btn-personalize {
+  border: 2px solid black;
+  background: white;
+  font-size: 1em;
+}
+
+.description > h4 {
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #999999;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.description div div h3 {
+  font-size: 1.7em;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.description div div h3:nth-of-type(1) {
+  margin-top: 10px;
+}
+
+.others-test {
+  display: none;
+} */
+
+@media screen and (min-width: 768px) {
+  .row > h2 {
+    font-size: 2.5em;
+  }
+
+  /* .product {
+    margin-top: 0;
+  }
+
+  .quantity {
+    display: block;
+  }
+
+  .galery {
+    width: 365px;
+    height: 365px;
+  }
+
+  .others {
+    display: block;
+  }
+
+  .top-others {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .top-others > p {
+    color: #999999;
+  }
+
+  .top-others > a > p {
+    margin: 0;
+  }
+
+  .others-galery{
+    margin-bottom: 50px;
+  }
+
+  .others-galery .option {
+    text-align: center;
+  }
+
+  .others-galery .option > img {
+    width: 100%;
+    height: 100%;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    min-width: 50px;
+  }
+
+  .buy-options {
+  }
+
+  .chose-buy-option {
+    display: none;
+  }
+
+  .size-quantity {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 120px;
+  }
+
+  .quantity > div {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quantity > div > span {
+    width: 20%;
+    text-align: center;
+    align-self: center;
+  }
+
+  .quantity button {
+    width: 40%;
+    height: 30px;
+    background: white;
+    border: 1px solid #dcdcdc;
+  }
+
+  .description > div {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 100px;
+  }
+
+  .option > img {
+    margin: auto;
+  } */
+}
+
+@media screen and (min-width: 992px) {
+  .row {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .row > h2 {
+    font-size: 3em;
+  }
+
+  /* .galery {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "big-img"
+      "small-img";
+    min-width: 480px;
+  }
+
+  .galery > img {
+    grid-area: big-img;
+    height: 560px;
+  }
+
+  .galery > .galery-small {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 20px;
+    margin-top: 20px;
+    grid-area: small-img;
+    width: 100%;
+  }
+
+  .galery > .galery-small > img {
+    display: block;
+    width: 100%;
+    max-height: 123.75px;
+    object-fit: cover;
+  }
+
+  .product {
+    display: grid;
+    grid-auto-flow: column;
+    margin-top: 50px;
+    grid-template-areas: "big-img buy";
+    grid-template-columns: 6fr 6fr;
+    grid-gap: 0 90px;
+  }
+
+  .buy-options {
+    margin-top: 0;
+    grid-area: buy;
+    display: grid;
+  }
+
+  .description {
+    margin: 50px 0;
+  }
+
+  .description > div {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+  }
+
+  .description-package {
+    min-width: 480px;
+  }
+  .others {
+    overflow: hidden;
+  }
+  .others-galery {
+    position: relative;
+  }
+
+  .others-galery .option img {
+    width: 100%;
+    height: auto;
+  }
+
+  .top-others {
+    margin-bottom: 10px;
+  } */
+}
